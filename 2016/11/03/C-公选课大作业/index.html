@@ -1,0 +1,1166 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="C++," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="一、作业题目个人通讯录管理系统建立一通讯录，输入姓名、电话号码、住址等信息，然后对通信簿进行显示、查找、添加、修改及删除。功能要求：(1) 通讯录的每一条信息包括姓名、单位、固定电话、移动手机、分类（如同事、朋友、同学、家人等）、EMAIL、QQ等。(2) 输入功能：可以一次完成若干条信息的输入。(3) 显示功能：完成全部通讯录信息的显示(一屏最多显示10条,超过十条应能够自动分屏显示)(4) 查">
+<meta property="og:type" content="article">
+<meta property="og:title" content="C++个性课大作业">
+<meta property="og:url" content="http://yoursite.com/2016/11/03/C-公选课大作业/index.html">
+<meta property="og:site_name" content="~糖果先生的干货">
+<meta property="og:description" content="一、作业题目个人通讯录管理系统建立一通讯录，输入姓名、电话号码、住址等信息，然后对通信簿进行显示、查找、添加、修改及删除。功能要求：(1) 通讯录的每一条信息包括姓名、单位、固定电话、移动手机、分类（如同事、朋友、同学、家人等）、EMAIL、QQ等。(2) 输入功能：可以一次完成若干条信息的输入。(3) 显示功能：完成全部通讯录信息的显示(一屏最多显示10条,超过十条应能够自动分屏显示)(4) 查">
+<meta property="og:updated_time" content="2016-11-03T12:53:57.405Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="C++个性课大作业">
+<meta name="twitter:description" content="一、作业题目个人通讯录管理系统建立一通讯录，输入姓名、电话号码、住址等信息，然后对通信簿进行显示、查找、添加、修改及删除。功能要求：(1) 通讯录的每一条信息包括姓名、单位、固定电话、移动手机、分类（如同事、朋友、同学、家人等）、EMAIL、QQ等。(2) 输入功能：可以一次完成若干条信息的输入。(3) 显示功能：完成全部通讯录信息的显示(一屏最多显示10条,超过十条应能够自动分屏显示)(4) 查">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"always"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 6334645623500834000,
+      author: '博主'
+    }
+  };
+</script>
+
+  <title> C++个性课大作业 | ~糖果先生的干货 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">~糖果先生的干货</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">Welcome to Mirza's Blog!!</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            公益404
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=280 height=110 src="https://music.163.com/outchain/player?type=0&id=465610318&auto=1&height=90"></iframe> </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                C++个性课大作业
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-11-03T18:25:13+08:00" content="2016-11-03">
+              2016-11-03
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/11/03/C-公选课大作业/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/11/03/C-公选课大作业/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="一、作业题目"><a href="#一、作业题目" class="headerlink" title="一、作业题目"></a>一、作业题目</h1><p>个人通讯录管理系统<br>建立一通讯录，输入姓名、电话号码、住址等信息，然后对通信簿进行显示、查找、添加、修改及删除。<br>功能要求：<br>(1) 通讯录的每一条信息包括姓名、单位、固定电话、移动手机、分类（如同事、朋友、同学、家人等）、EMAIL、QQ等。<br>(2) 输入功能：可以一次完成若干条信息的输入。<br>(3) 显示功能：完成全部通讯录信息的显示(一屏最多显示10条,超过十条应能够自动分屏显示)<br>(4) 查找功能：可以按姓名等多种方式查找通讯信息<br>(5) 增加、删除、修改功能：完成通讯录信息的多种更新</p>
+<a id="more"></a>
+<h1 id="二、源代码"><a href="#二、源代码" class="headerlink" title="二、源代码"></a>二、源代码</h1><h2 id="1-头文件"><a href="#1-头文件" class="headerlink" title="1. 头文件"></a>1. 头文件</h2><h3 id="class-h"><a href="#class-h" class="headerlink" title="class.h"></a>class.h</h3><pre><code>#ifndef CLASS_H
+#define CLASS_H
+#include&lt;string&gt;
+using namespace std;
+class Person
+{
+public:
+    string getName(){return m_sName;}
+    string getCompany(){return m_sCompany;}
+    string getMobile(){return m_sMobile;}
+    string getRelation(){return m_sRelation;}
+    string getEmail(){return m_sEmail;}
+    string getQQ(){return m_sQQ;}
+    void setName(string Name0){m_sName = Name0;}
+    void setCompany(string Company0){m_sCompany = Company0;}
+    void setMobile(string Mobile0){m_sMobile = Mobile0;}
+    void setRelation(string Relation0){m_sRelation = Relation0;}
+    void setEmail(string Email0){m_sEmail = Email0;}
+    void setQQ(string QQ0){m_sQQ = QQ0;}
+private:
+    string m_sName;
+    string m_sCompany;
+    string m_sMobile;
+    string m_sRelation;
+    string m_sEmail;
+    string m_sQQ;
+};
+class Person_node
+{
+public:
+    Person data;
+    Person_node *next;
+};
+#endif
+</code></pre><h3 id="global-h"><a href="#global-h" class="headerlink" title="global.h"></a>global.h</h3><pre><code>#ifndef GLOBAL_H
+#define GLOBAL_H
+#define SIZEMAX 20
+#endif
+</code></pre><h3 id="menu-h"><a href="#menu-h" class="headerlink" title="menu.h"></a>menu.h</h3><pre><code>#ifndef MENU_H
+#define MENU_H
+void initPersonList(Person_node* &amp;front,Person_node* &amp;rear);
+int add(Person_node* &amp;front,Person_node* &amp;rear);
+int show(Person_node* &amp;front,Person_node* &amp;rear);
+int querry(Person_node* &amp;front,Person_node* &amp;rear);
+int set(Person_node* &amp;front,Person_node* &amp;rear);
+int del(Person_node* &amp;front,Person_node* &amp;rear);
+#endif
+</code></pre><h3 id="tool-h"><a href="#tool-h" class="headerlink" title="tool.h"></a>tool.h</h3><pre><code>#ifndef TOOL_H
+#define TOOL_H
+void initPersonList(Person_node* &amp;front,Person_node* &amp;rear);
+int QuerryInf(Person_node* &amp;Q,Person_node* &amp;rear,string _sQue,int a);
+#endif
+</code></pre><h2 id="2-源文件"><a href="#2-源文件" class="headerlink" title="2.源文件"></a>2.源文件</h2><h3 id="main-cpp"><a href="#main-cpp" class="headerlink" title="main.cpp"></a>main.cpp</h3><pre><code>#include&lt;iostream&gt;
+#include&lt;stdlib.h&gt;
+#include&lt;stdio.h&gt;
+#include&lt;string&gt;
+#include&quot;class.h&quot;
+#include &quot;tool.h&quot;
+#include&quot;menu.h&quot;
+#include&quot;global.h&quot;
+using namespace std;
+Person_node* front = NULL;
+Person_node* rear = NULL;
+int main()
+{
+    initPersonList(front,rear);
+    int n;
+    do
+    {
+        printf(&quot;======欢迎进入个人通讯录管理系统！======\n&quot;);
+        printf(&quot;【1】新建联系人\n&quot;);
+        printf(&quot;【2】显示所有联系人\n&quot;);
+        printf(&quot;【3】查询联系人\n&quot;);
+        printf(&quot;【4】修改联系人\n&quot;);
+        printf(&quot;【5】删除联系人\n&quot;);
+        printf(&quot;【0】退出程序\n&quot;);
+        printf(&quot;请选择菜单项编号(0-5)：&quot;);
+        scanf(&quot;%d&quot;,&amp;n);
+        switch (n)
+        {
+            case 1:add(front,rear);break;
+            case 2:show(front,rear);break;
+            case 3:querry(front,rear);break;
+            case 4:set(front,rear);break;
+            case 5:del(front,rear);break;
+            case 0:printf(&quot;退出程序！&quot;);break;
+            default:printf(&quot;\n输入错误，请重新输入序号（0-5）\n\n&quot;);break;
+        }
+    }
+    while (n!=0);
+    system(&quot;pause&quot;);
+    return 0;
+}
+</code></pre><h3 id="menu-cpp"><a href="#menu-cpp" class="headerlink" title="menu.cpp"></a>menu.cpp</h3><pre><code>#include&lt;stdio.h&gt;
+#include&lt;iostream&gt;
+#include&quot;class.h&quot;
+#include&quot;global.h&quot;
+#include &quot;tool.h&quot;
+int add(Person_node* &amp;front,Person_node* &amp;rear)
+{//返回0正常，1则不正常
+    string name;
+    string company;
+    string mobile;
+    string relation;
+    string email;
+    string qq;
+    Person_node* Q;
+    Q = front;
+    cout&lt;&lt;&quot;【新建联系人】&quot;&lt;&lt;endl;
+    if(rear-&gt;next == front)
+    {
+        cout&lt;&lt;&quot;联系人已满！请先删除联系人！&quot;&lt;&lt;endl;
+        return 1;
+    }
+    //以下部分可以考虑用正则表达式来实现鲁棒性
+    cout&lt;&lt;&quot;请输入姓名:&quot;&lt;&lt;endl;
+    cin&gt;&gt;name;
+    if (!QuerryInf(Q,rear,name,1))//判断是否存在姓名
+    {
+        cout&lt;&lt;&quot;姓名已存在，返回上级菜单！&quot;&lt;&lt;endl;
+        return 1;
+    }
+    rear-&gt;data.setName(name);
+    cout&lt;&lt;&quot;请输入单位:&quot;&lt;&lt;endl;
+    cin&gt;&gt;company;
+    rear-&gt;data.setCompany(company);
+    cout&lt;&lt;&quot;请输入手机号:&quot;&lt;&lt;endl;
+    cin&gt;&gt;mobile;
+    rear-&gt;data.setMobile(mobile);
+    cout&lt;&lt;&quot;请输入分类:&quot;&lt;&lt;endl;
+    cin&gt;&gt;relation;
+    rear-&gt;data.setRelation(relation);
+    cout&lt;&lt;&quot;请输入Email:&quot;&lt;&lt;endl;
+    cin&gt;&gt;email;
+    rear-&gt;data.setEmail(email);
+    cout&lt;&lt;&quot;请输入QQ号:&quot;&lt;&lt;endl;
+    cin&gt;&gt;qq;
+    rear-&gt;data.setQQ(qq);
+    rear = rear-&gt;next;
+    cout&lt;&lt;&quot;新建联系人成功！&quot;&lt;&lt;endl;
+    return 0;
+}
+
+int show(Person_node* &amp;front,Person_node* &amp;rear)
+{//返回0正常，1则不正常
+    Person_node* p;
+    p = front;
+    int nCount = 0;//输出信息计数器
+    if(front == rear)
+    {
+        cout&lt;&lt;&quot;联系人为空！&quot;&lt;&lt;endl&lt;&lt;endl;
+        return 1;
+    }
+
+    do 
+    {
+        cout &lt;&lt; &quot;==================================&quot;&lt;&lt;endl;
+        cout &lt;&lt; &quot;姓名：&quot; &lt;&lt; p-&gt;data.getName()&lt;&lt;endl;
+        cout &lt;&lt; &quot;公司：&quot;&lt;&lt; p-&gt;data.getCompany()&lt;&lt;endl;
+        cout &lt;&lt; &quot;手机号:&quot; &lt;&lt; p-&gt;data.getMobile()&lt;&lt;endl;
+        cout &lt;&lt; &quot;分类:&quot; &lt;&lt; p-&gt;data.getRelation()&lt;&lt;endl;
+        cout &lt;&lt; &quot;Email:&quot; &lt;&lt; p-&gt;data.getEmail()&lt;&lt;endl;
+        cout &lt;&lt; &quot;QQ:&quot; &lt;&lt; p-&gt;data.getQQ()&lt;&lt;endl;
+        cout &lt;&lt; &quot;==================================&quot;&lt;&lt;endl;
+        p = p-&gt;next;
+        if (10*(nCount/10) == nCount &amp;&amp; nCount != 0)
+        {//分页显示，满10条信息停一下。
+            cout&lt;&lt; &quot;信息未显示完，按任意键继续显示。&quot;&lt;&lt;endl;
+            system(&quot;pause&quot;);
+        }
+        nCount++;
+    } while (p != rear);
+    return 0;
+
+}
+
+int querry(Person_node* &amp;front,Person_node* &amp;rear)
+{
+    Person_node* pQuerry;//声明一个查找指针
+    pQuerry = front;
+    int nCate;
+    string strQuerry;//查找的关键字
+    if(front == rear)
+    {
+        cout&lt;&lt;&quot;联系人为空！&quot;&lt;&lt;endl&lt;&lt;endl;
+        return 1;
+    }
+    do 
+    {//依旧采用do while来实现错误输入循环
+        cout &lt;&lt; &quot;请输入需要查询的种类：&quot;&lt;&lt;endl;
+        cout &lt;&lt; &quot;【1】姓名&quot; &lt;&lt; endl &lt;&lt; &quot;【2】公司&quot; &lt;&lt; endl &lt;&lt; &quot;【3】手机&quot; 
+            &lt;&lt; endl &lt;&lt; &quot;【4】分类&quot;&lt;&lt;endl&lt;&lt;&quot;【5】Email&quot;&lt;&lt; endl &lt;&lt;&quot;【6】QQ&quot; &lt;&lt; endl &lt;&lt;&quot;【0】返回上级菜单&quot;&lt;&lt;endl;
+        cin&gt;&gt;nCate;
+        switch(nCate)
+        {
+        case 1:
+            {
+                cout &lt;&lt; &quot;请输入需要查找的姓名:&quot;;
+                cin&gt;&gt;strQuerry;
+                if (QuerryInf(pQuerry,rear,strQuerry,1))
+                {
+                    cout &lt;&lt; &quot;没有查找到相关信息！&quot;&lt;&lt;endl;
+                    return 1;
+                }
+                return 0;
+            }break;
+        case 2:
+            {
+                cout &lt;&lt; &quot;请输入需要查找的公司:&quot;;
+                cin&gt;&gt;strQuerry;
+                if (QuerryInf(pQuerry,rear,strQuerry,2))
+                {
+                    cout &lt;&lt; &quot;没有查找到相关信息！&quot;&lt;&lt;endl;
+                    return 1;
+                }
+                return 0;
+            }break;
+        case 3:
+        {
+            cout &lt;&lt; &quot;请输入需要查找的手机号:&quot;;
+            cin&gt;&gt;strQuerry;
+            if (QuerryInf(pQuerry,rear,strQuerry,3))
+            {
+                cout &lt;&lt; &quot;没有查找到相关信息！&quot;&lt;&lt;endl;
+                return 1;
+            }
+            return 0;
+        }break;
+        case 4:
+        {
+            cout &lt;&lt; &quot;请输入需要查找的分类:&quot;;
+            cin&gt;&gt;strQuerry;
+            if (QuerryInf(pQuerry,rear,strQuerry,4))
+            {
+                cout &lt;&lt; &quot;没有查找到相关信息！&quot;&lt;&lt;endl;
+                return 1;
+            }
+            return 0;
+        }break;
+        case 5:
+            {
+                cout &lt;&lt; &quot;请输入需要查找的Email:&quot;;
+                cin&gt;&gt;strQuerry;
+                if (QuerryInf(pQuerry,rear,strQuerry,5))
+                {
+                    cout &lt;&lt; &quot;没有查找到相关信息！&quot;&lt;&lt;endl;
+                    return 1;
+                }
+                return 0;
+            }break;
+        case 6:
+        {
+            cout &lt;&lt; &quot;请输入需要查找的QQ号:&quot;;
+            cin&gt;&gt;strQuerry;
+            if (QuerryInf(pQuerry,rear,strQuerry,6))
+            {
+                cout &lt;&lt; &quot;没有查找到相关信息！&quot;&lt;&lt;endl;
+                return 1;
+            }
+            return 0;
+        }break;
+        case 0:return 0;break;
+        default:printf(&quot;\n输入错误，请重新输入序号（0-6）\n\n&quot;);break;
+        }
+    } while (nCate != 0);
+
+
+    return 0;
+}
+
+
+int set(Person_node* &amp;front,Person_node* &amp;rear)
+{    
+    Person_node* Q;
+    Q = front;
+    string strInput;
+    string name;
+    string company;
+    string mobile;
+    string relation;
+    string email;
+    string qq;
+    show(front,rear);
+    cout &lt;&lt; &quot;请输入想要修改的联系人名：&quot;;
+    cin &gt;&gt; strInput;
+    while(Q != rear)
+    {
+        if (strInput == Q-&gt;data.getName())
+        {
+            cout&lt;&lt;&quot;姓名确定成功！&quot;&lt;&lt;endl&lt;&lt;&quot;请输入新姓名:&quot;&lt;&lt;endl;
+            cin&gt;&gt;name;
+            Q-&gt;data.setName(name);
+            cout&lt;&lt;&quot;请输入新单位:&quot;&lt;&lt;endl;
+            cin&gt;&gt;company;
+            Q-&gt;data.setCompany(company);
+            cout&lt;&lt;&quot;请输入新手机号:&quot;&lt;&lt;endl;
+            cin&gt;&gt;mobile;
+            Q-&gt;data.setMobile(mobile);
+            cout&lt;&lt;&quot;请输入新分类:&quot;&lt;&lt;endl;
+            cin&gt;&gt;relation;
+            Q-&gt;data.setRelation(relation);
+            cout&lt;&lt;&quot;请输入新Email:&quot;&lt;&lt;endl;
+            cin&gt;&gt;email;
+            Q-&gt;data.setEmail(email);
+            cout&lt;&lt;&quot;请输入新QQ号:&quot;&lt;&lt;endl;
+            cin&gt;&gt;qq;
+            Q-&gt;data.setQQ(qq);
+            cout&lt;&lt;&quot;=&gt;修改成功！&quot;&lt;&lt;endl;
+            return 0;
+        }
+        Q = Q-&gt;next;
+    }
+    cout &lt;&lt; &quot;没有查找到相关信息！&quot;&lt;&lt;endl;
+    return 1;
+}
+int del(Person_node* &amp;front,Person_node* &amp;rear)
+{
+    Person_node* Q;
+    Person_node* P;//暂存指针
+    Q = front;
+    string strInput;
+    string name;
+    string company;
+    string mobile;
+    string relation;
+    string email;
+    string qq;
+    show(front,rear);
+    cout &lt;&lt; &quot;请输入想要修改的联系人名：&quot;;
+    cin &gt;&gt; strInput;
+    while(Q != rear)
+    {
+        if (Q == front &amp;&amp; strInput == Q-&gt;data.getName())
+        {
+            front = front-&gt;next;
+            cout&lt;&lt;&quot;删除成功！&quot;&lt;&lt;endl;
+            return 0;
+        }
+        if (strInput == Q-&gt;next-&gt;data.getName())
+        {
+
+            P = Q-&gt;next;
+            Q-&gt;next = front;
+            front = front-&gt;next;
+            Q-&gt;next-&gt;next = P-&gt;next;
+            cout&lt;&lt;&quot;删除成功！&quot;&lt;&lt;endl;
+            return 0;
+        }
+        Q = Q-&gt;next;
+    }
+    cout &lt;&lt; &quot;没有查找到相关信息！&quot;&lt;&lt;endl;
+    return 1;
+}
+</code></pre><h3 id="tool-cpp"><a href="#tool-cpp" class="headerlink" title="tool.cpp"></a>tool.cpp</h3><pre><code>#include&lt;stdio.h&gt;
+#include&lt;iostream&gt;
+#include&quot;class.h&quot;
+#include&quot;global.h&quot;
+Person_node person_node[SIZEMAX];
+void initPersonList(Person_node* &amp;front,Person_node* &amp;rear)
+{//采用循环队列实现链式存储，并牺牲最后一个元素空间来实现队空队满的判断。
+    int a = 0;
+    front = &amp;person_node[0];//链表的头部
+    for(a = 0;a &lt; SIZEMAX;a++)
+    {
+        if(SIZEMAX-1 == a)//一定要把值放前面，变量放后面，方便debug
+            person_node[a].next = &amp;person_node[0];//链表的尾部
+        else
+            person_node[a].next = &amp;person_node[a+1];
+    }
+    rear = &amp;person_node[0];//链表的尾部
+
+}
+
+int QuerryInf(Person_node* &amp;Q,Person_node* &amp;rear,string _sQue,int a)
+{
+    int i = 1;//返回值
+
+    switch(a)//1表示名字，2表示公司，3表示手机号，4表示分类，5表示Email，6表示QQ
+    {
+    case 1://姓名
+        {
+            while(Q != rear)
+            {
+                if (_sQue == Q-&gt;data.getName())
+                {
+                    cout &lt;&lt; &quot;查找成功！&quot;&lt;&lt;endl;
+                    cout &lt;&lt; &quot;==================================&quot;&lt;&lt;endl;
+                    cout &lt;&lt; &quot;姓名：&quot; &lt;&lt; Q-&gt;data.getName()&lt;&lt;endl;
+                    cout &lt;&lt; &quot;公司：&quot;&lt;&lt; Q-&gt;data.getCompany()&lt;&lt;endl;
+                    cout &lt;&lt; &quot;手机号:&quot; &lt;&lt; Q-&gt;data.getMobile()&lt;&lt;endl;
+                    cout &lt;&lt; &quot;分类:&quot; &lt;&lt; Q-&gt;data.getRelation()&lt;&lt;endl;
+                    cout &lt;&lt; &quot;Email:&quot; &lt;&lt; Q-&gt;data.getEmail()&lt;&lt;endl;
+                    cout &lt;&lt; &quot;QQ:&quot; &lt;&lt; Q-&gt;data.getQQ()&lt;&lt;endl;
+                    cout &lt;&lt; &quot;==================================&quot;&lt;&lt;endl;
+                    i = 0;
+                }
+                Q = Q-&gt;next;
+            }
+            return i;
+        }
+    case 2://公司
+        {
+            while(Q != rear)
+            {
+                if (_sQue == Q-&gt;data.getCompany())
+                {
+                    cout &lt;&lt; &quot;查找成功！&quot;&lt;&lt;endl;
+                    cout &lt;&lt; &quot;==================================&quot;&lt;&lt;endl;
+                    cout &lt;&lt; &quot;姓名：&quot; &lt;&lt; Q-&gt;data.getName()&lt;&lt;endl;
+                    cout &lt;&lt; &quot;公司：&quot;&lt;&lt; Q-&gt;data.getCompany()&lt;&lt;endl;
+                    cout &lt;&lt; &quot;手机号:&quot; &lt;&lt; Q-&gt;data.getMobile()&lt;&lt;endl;
+                    cout &lt;&lt; &quot;分类:&quot; &lt;&lt; Q-&gt;data.getRelation()&lt;&lt;endl;
+                    cout &lt;&lt; &quot;Email:&quot; &lt;&lt; Q-&gt;data.getEmail()&lt;&lt;endl;
+                    cout &lt;&lt; &quot;QQ:&quot; &lt;&lt; Q-&gt;data.getQQ()&lt;&lt;endl;
+                    cout &lt;&lt; &quot;==================================&quot;&lt;&lt;endl;
+                    i = 0;
+                }
+                Q = Q-&gt;next;
+            }
+            return i;
+        }
+    case 3://手机号
+        {
+            while(Q != rear)
+            {
+                if (_sQue == Q-&gt;data.getMobile())
+                {
+                    cout &lt;&lt; &quot;查找成功！&quot;&lt;&lt;endl;
+                    cout &lt;&lt; &quot;==================================&quot;&lt;&lt;endl;
+                    cout &lt;&lt; &quot;姓名：&quot; &lt;&lt; Q-&gt;data.getName()&lt;&lt;endl;
+                    cout &lt;&lt; &quot;公司：&quot;&lt;&lt; Q-&gt;data.getCompany()&lt;&lt;endl;
+                    cout &lt;&lt; &quot;手机号:&quot; &lt;&lt; Q-&gt;data.getMobile()&lt;&lt;endl;
+                    cout &lt;&lt; &quot;分类:&quot; &lt;&lt; Q-&gt;data.getRelation()&lt;&lt;endl;
+                    cout &lt;&lt; &quot;Email:&quot; &lt;&lt; Q-&gt;data.getEmail()&lt;&lt;endl;
+                    cout &lt;&lt; &quot;QQ:&quot; &lt;&lt; Q-&gt;data.getQQ()&lt;&lt;endl;
+                    cout &lt;&lt; &quot;==================================&quot;&lt;&lt;endl;
+                    i = 0;
+                }
+                Q = Q-&gt;next;
+            }
+            return i;
+        }
+    case 4://分类
+        {
+            while(Q != rear)
+            {
+                if (_sQue == Q-&gt;data.getRelation())
+                {
+                    cout &lt;&lt; &quot;查找成功！&quot;&lt;&lt;endl;
+                    cout &lt;&lt; &quot;==================================&quot;&lt;&lt;endl;
+                    cout &lt;&lt; &quot;姓名：&quot; &lt;&lt; Q-&gt;data.getName()&lt;&lt;endl;
+                    cout &lt;&lt; &quot;公司：&quot;&lt;&lt; Q-&gt;data.getCompany()&lt;&lt;endl;
+                    cout &lt;&lt; &quot;手机号:&quot; &lt;&lt; Q-&gt;data.getMobile()&lt;&lt;endl;
+                    cout &lt;&lt; &quot;分类:&quot; &lt;&lt; Q-&gt;data.getRelation()&lt;&lt;endl;
+                    cout &lt;&lt; &quot;Email:&quot; &lt;&lt; Q-&gt;data.getEmail()&lt;&lt;endl;
+                    cout &lt;&lt; &quot;QQ:&quot; &lt;&lt; Q-&gt;data.getQQ()&lt;&lt;endl;
+                    cout &lt;&lt; &quot;==================================&quot;&lt;&lt;endl;
+                    i = 0;
+                }
+                Q = Q-&gt;next;
+            }
+            return i;
+        }
+    case 5://Email
+    {
+        while(Q != rear)
+        {
+            if (_sQue == Q-&gt;data.getEmail())
+            {
+                cout &lt;&lt; &quot;查找成功！&quot;&lt;&lt;endl;
+                cout &lt;&lt; &quot;==================================&quot;&lt;&lt;endl;
+                cout &lt;&lt; &quot;姓名：&quot; &lt;&lt; Q-&gt;data.getName()&lt;&lt;endl;
+                cout &lt;&lt; &quot;公司：&quot;&lt;&lt; Q-&gt;data.getCompany()&lt;&lt;endl;
+                cout &lt;&lt; &quot;手机号:&quot; &lt;&lt; Q-&gt;data.getMobile()&lt;&lt;endl;
+                cout &lt;&lt; &quot;分类:&quot; &lt;&lt; Q-&gt;data.getRelation()&lt;&lt;endl;
+                cout &lt;&lt; &quot;Email:&quot; &lt;&lt; Q-&gt;data.getEmail()&lt;&lt;endl;
+                cout &lt;&lt; &quot;QQ:&quot; &lt;&lt; Q-&gt;data.getQQ()&lt;&lt;endl;
+                cout &lt;&lt; &quot;==================================&quot;&lt;&lt;endl;
+                i = 0;
+            }
+            Q = Q-&gt;next;
+        }
+        return i;
+    }
+    case 6://QQ
+        {
+            while(Q != rear)
+            {
+                if (_sQue == Q-&gt;data.getQQ())
+                {
+                    cout &lt;&lt; &quot;查找成功！&quot;&lt;&lt;endl;
+                    cout &lt;&lt; &quot;==================================&quot;&lt;&lt;endl;
+                    cout &lt;&lt; &quot;姓名：&quot; &lt;&lt; Q-&gt;data.getName()&lt;&lt;endl;
+                    cout &lt;&lt; &quot;公司：&quot;&lt;&lt; Q-&gt;data.getCompany()&lt;&lt;endl;
+                    cout &lt;&lt; &quot;手机号:&quot; &lt;&lt; Q-&gt;data.getMobile()&lt;&lt;endl;
+                    cout &lt;&lt; &quot;分类:&quot; &lt;&lt; Q-&gt;data.getRelation()&lt;&lt;endl;
+                    cout &lt;&lt; &quot;Email:&quot; &lt;&lt; Q-&gt;data.getEmail()&lt;&lt;endl;
+                    cout &lt;&lt; &quot;QQ:&quot; &lt;&lt; Q-&gt;data.getQQ()&lt;&lt;endl;
+                    cout &lt;&lt; &quot;==================================&quot;&lt;&lt;endl;
+                    i = 0;
+                }
+                Q = Q-&gt;next;
+            }
+            return i;
+        }
+    }
+}
+</code></pre><h1 id="三、小结"><a href="#三、小结" class="headerlink" title="三、小结"></a>三、小结</h1><p>C++个性课大作业可以说是相当基本的一个作业，而且操作难度不大。本想随便胡乱写一下，后来想想觉得还是有必要好好写写复习一下C++，同时不让自己手生下来。毕竟程序猿的成功秘诀是“ABC”（Always Be Coding)。当真正写下来之后发现，还是有一些收获的。</p>
+<ol>
+<li><p>变量名的声明养成好的习惯。<br>这是第一次讲变量名定义的比较明确的一次，本以为过长的变量名会带来输入上的麻烦，但是在VS上安装了visual assist x后，这道反而是一件很方便的事情。关于C++命名的规则链接：<a href="http://www.cnblogs.com/ggjucheng/archive/2011/12/15/2289291.html" target="_blank" rel="external">C++命名规则</a></p>
+</li>
+<li><p>好的工程要有一个合适的数据结构<br>之前做的计费管理系统是采用普通的链表，这次用了本学期学的数据结构里面所提到的循环队列。在之后的算法设计方面也因此轻松了许多。</p>
+</li>
+<li><p>在做if判断的时候，常量一定一定要放在前面，避免出现==写成=而造成蜜汁赋值，bug找不出来。就这个bug居然折腾了一个多小时。血的教训啊。。。。</p>
+</li>
+<li><p>注意include的顺序，类的声明要放在函数的include前面，不然也会报错。</p>
+</li>
+<li><p>不足：这次里面没有涉及内存的分配管理，下次这个需要注意。在这里立个flag。算法设计不够完美，还有很多缺漏的地方；注释的使用没有规则，为了增强代码的可读性，应该规范化注释。</p>
+</li>
+</ol>
+
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/C/" rel="tag">#C++</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/10/29/用Unity3d做一个人物运动/" rel="next" title="用Unity3d做一个人物运动">
+                <i class="fa fa-chevron-left"></i> 用Unity3d做一个人物运动
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <div class="ds-share flat" data-thread-key="2016/11/03/C-公选课大作业/"
+     data-title="C++个性课大作业"
+     data-content=""
+     data-url="http://yoursite.com/2016/11/03/C-公选课大作业/">
+  <div class="ds-share-inline">
+    <ul  class="ds-share-icons-16">
+
+      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+      <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+
+    </ul>
+    <div class="ds-share-icons-more">
+    </div>
+  </div>
+</div>
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/11/03/C-公选课大作业/"
+           data-title="C++个性课大作业" data-url="http://yoursite.com/2016/11/03/C-公选课大作业/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.jpg"
+               alt="Mirza Zhao" />
+          <p class="site-author-name" itemprop="name">Mirza Zhao</p>
+          <p class="site-description motion-element" itemprop="description">I'm but a student.There is much to learn!</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">10</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/u/2620945487?is_hot=1" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  Weibo
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一、作业题目"><span class="nav-number">1.</span> <span class="nav-text">一、作业题目</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二、源代码"><span class="nav-number">2.</span> <span class="nav-text">二、源代码</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-头文件"><span class="nav-number">2.1.</span> <span class="nav-text">1. 头文件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#class-h"><span class="nav-number">2.1.1.</span> <span class="nav-text">class.h</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#global-h"><span class="nav-number">2.1.2.</span> <span class="nav-text">global.h</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#menu-h"><span class="nav-number">2.1.3.</span> <span class="nav-text">menu.h</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#tool-h"><span class="nav-number">2.1.4.</span> <span class="nav-text">tool.h</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-源文件"><span class="nav-number">2.2.</span> <span class="nav-text">2.源文件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#main-cpp"><span class="nav-number">2.2.1.</span> <span class="nav-text">main.cpp</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#menu-cpp"><span class="nav-number">2.2.2.</span> <span class="nav-text">menu.cpp</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#tool-cpp"><span class="nav-number">2.2.3.</span> <span class="nav-text">tool.cpp</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#三、小结"><span class="nav-number">3.</span> <span class="nav-text">三、小结</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Mirza Zhao</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<span id="busuanzi_container_site_pv" style='display:none'>
+    丨本站总访问量<span id="busuanzi_value_page_pv"><i class="fa fa-spinner"></i></span>次
+</span>
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"124665532"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+      
+      <script src="/vendors/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+      <script src="/js/src/hook-duoshuo.js"></script>
+    
+  
+
+
+
+
+
+  
+  
+  
+
+  
+
+  
+<script type="text/javascript" async src="//push.zhanzhang.baidu.com/push.js">
+</script>
+
+

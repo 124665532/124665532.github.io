@@ -1,0 +1,1001 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="HTML,CSS,JavaScript," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="一、前期准备1.WebStorm下载2.bootstrap-3.3.5-dist库的下载3.HTML CSS JS相关知识的学习">
+<meta property="og:type" content="article">
+<meta property="og:title" content="制作伪淘宝登录界面">
+<meta property="og:url" content="http://yoursite.com/2016/10/15/制作伪淘宝登录界面/index.html">
+<meta property="og:site_name" content="~糖果先生的干货">
+<meta property="og:description" content="一、前期准备1.WebStorm下载2.bootstrap-3.3.5-dist库的下载3.HTML CSS JS相关知识的学习">
+<meta property="og:image" content="http://a2.qpic.cn/psb?/V10ENCWC0EABA1/T2mIUOAWps7twWg9JGImonyEPjSuS*fE5oWGxJCjIcY!/b/dAkBAAAAAAAA&bo=VgVXAgAAAAAFByI!&rf=viewer_4">
+<meta property="og:image" content="http://images.cnitblog.com/blog/571758/201310/19105659-8911d6527e3b4072985f29216c080154.png">
+<meta property="og:image" content="http://a1.qpic.cn/psb?/V10ENCWC0EABA1/34HildYa8M.jolk7m*dITYlVeau76tsMQYCTtXeTeX0!/b/dHcBAAAAAAAA&bo=dQF6AQAAAAAFBys!&rf=viewer_4">
+<meta property="og:image" content="http://a2.qpic.cn/psb?/V10ENCWC0EABA1/eag07eMolUQlBNmNMWAAEJ5G6GnPuuz*IJXxF*4Gnio!/b/dAkBAAAAAAAA&bo=jwF5AQAAAAAFB9I!&rf=viewer_4">
+<meta property="og:updated_time" content="2016-10-30T06:39:38.768Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="制作伪淘宝登录界面">
+<meta name="twitter:description" content="一、前期准备1.WebStorm下载2.bootstrap-3.3.5-dist库的下载3.HTML CSS JS相关知识的学习">
+<meta name="twitter:image" content="http://a2.qpic.cn/psb?/V10ENCWC0EABA1/T2mIUOAWps7twWg9JGImonyEPjSuS*fE5oWGxJCjIcY!/b/dAkBAAAAAAAA&bo=VgVXAgAAAAAFByI!&rf=viewer_4">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"always"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 6334645623500834000,
+      author: '博主'
+    }
+  };
+</script>
+
+  <title> 制作伪淘宝登录界面 | ~糖果先生的干货 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">~糖果先生的干货</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">Welcome to Mirza's Blog!!</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            公益404
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=280 height=110 src="https://music.163.com/outchain/player?type=0&id=465610318&auto=1&height=90"></iframe> </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                制作伪淘宝登录界面
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-10-15T00:09:45+08:00" content="2016-10-15">
+              2016-10-15
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/10/15/制作伪淘宝登录界面/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/15/制作伪淘宝登录界面/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><img src="http://a2.qpic.cn/psb?/V10ENCWC0EABA1/T2mIUOAWps7twWg9JGImonyEPjSuS*fE5oWGxJCjIcY!/b/dAkBAAAAAAAA&amp;bo=VgVXAgAAAAAFByI!&amp;rf=viewer_4" alt="taobao"></p>
+<h1 id="一、前期准备"><a href="#一、前期准备" class="headerlink" title="一、前期准备"></a>一、前期准备</h1><p>1.WebStorm下载<br>2.bootstrap-3.3.5-dist库的下载<br>3.HTML CSS JS相关知识的学习</p>
+<a id="more"></a>
+<h1 id="二、学习制作伪淘宝登陆页面"><a href="#二、学习制作伪淘宝登陆页面" class="headerlink" title="二、学习制作伪淘宝登陆页面"></a>二、学习制作伪淘宝登陆页面</h1><h2 id="一、创建项目"><a href="#一、创建项目" class="headerlink" title="一、创建项目"></a>一、创建项目</h2><p>1.创建一个project命名为“Taobao”，并且将相关的素材以及bootstrap库放入文件夹下。</p>
+<p>2.在项目文件夹下新建文件“index.html”为主页面。以及“style.css”为css样式的文件。（理论上CSS文件可以不用，为了代码的简洁性，将样式的设置单独放在一个文件内）并使用：</p>
+<pre><code>&lt;link href=&quot;bootstrap-3.3.5-dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot;&gt;
+&lt;link href=&quot;styles.css&quot; rel=&quot;stylesheet&quot;&gt;
+</code></pre><p>将相关库与文件链接。<br>注：在这里如果将2句话对调后面会出现样式错误，CSS样式有先后的，后来的会覆盖之前的。</p>
+<h2 id="二、开始写HTML、CSS"><a href="#二、开始写HTML、CSS" class="headerlink" title="二、开始写HTML、CSS"></a>二、开始写HTML、CSS</h2><p>1.使用div标签将网页分为“top”，“mid”，“bottom”，使用类名class。（注：class与id的区别。Class可以被多个标签使用，而id每个标签只有唯一一个。）</p>
+<p>2.在top标签中插入a标签超链接并且用img将文件夹中的logo图片引用。同时在css文件中设置格式。</p>
+<p>3.Css设置格式时候需要运用盒子模型，并通过其将logo放入合适位置。<br><img src="http://images.cnitblog.com/blog/571758/201310/19105659-8911d6527e3b4072985f29216c080154.png" alt="box"></p>
+<p>4.在此使用div标签在mid类中插入登陆类：login并对其CSS进行设置。并使用bootstrap库中提供的登录框样式在login类中插入和设置input标签。</p>
+<pre><code>&lt;input type=&quot;text&quot; id=&quot;u&quot; class=&quot;form-control&quot; value=&quot;手机号/会员名/邮箱&quot;     onfocus=&quot;if(this.value==defaultValue) {this.value=&apos;&apos;;this.type=&apos;text&apos;}&quot;     onblur=&quot;if(!value) {value=defaultValue; this.type=&apos;text&apos;;}&quot; style=&quot;color:#CCC;&quot;&gt;
+</code></pre><p>再使用以上代码将用户名框后插入初始值。</p>
+<p>5.使用button标签做出登陆按钮。其样式参考淘宝网。<br>并且在css文件中使用.类名:hover来设置鼠标移动到按钮上之后的按钮颜色变化。<br>（注：&nbsp;是占位符，相当于一个空格，因为在js中多个空格只有一个空格效果）</p>
+<p>6.再次使用a标签插入忘记密码和注册账号。</p>
+<pre><code>&lt;a href=&quot;#&quot; id=&quot;forget&quot;&gt;忘记密码&lt;/a&gt;
+&lt;a href=&quot;#&quot; id=&quot;reg&quot;&gt;免费注册&lt;/a&gt;
+</code></pre><p>注：关于超链接下划线的问题，可以在css中使用</p>
+<pre><code>text-decoration: none;
+</code></pre><p>来消除掉。</p>
+<p>7.同理在bottom中使用各种a标签插入超链接，再用css设置样式，比如：</p>
+<pre><code>&lt;a href=&quot;http://www.alibabagroup.com/cn/global/home&quot; style=&quot;font-size:12px&quot;&gt;阿里巴巴集团&lt;/a&gt; |
+&lt;a href=&quot;http://www.alibaba.com/?spm=a2107.1.1997523009.2.OQvvDS&quot; style=&quot;font-size:12px&quot;&gt;阿里巴巴国际站&lt;/a&gt; |
+&lt;a href=&quot;http://www.1688.com/?spm=a2107.1.1997523009.3.OQvvDS&quot; style=&quot;font-size:12px&quot;&gt;阿里巴巴中国站&lt;/a&gt; |
+</code></pre><h2 id="三、JS的插入"><a href="#三、JS的插入" class="headerlink" title="三、JS的插入"></a>三、JS的插入</h2><p>1.JS可以插入在html的各个位置，只要使用script标签即可。我觉得将他放在html    的文件底部。</p>
+<p>2.使用相关代码获取id信息</p>
+<pre><code>document.getElementById(id)
+</code></pre><p>为了方便起见写了如下代码：</p>
+<pre><code>var $ = function(id){
+    return document.getElementById(id);
+}
+</code></pre><p>这样可以用$来代替一长串的字母。</p>
+<p>3.对登陆框进行简单的逻辑判断，在这里我和任务要求所做的有所差距，考虑到和淘宝    原网页的相似性，没有使用正则表达式等11位手机号的判断，而是直接使用：</p>
+<pre><code>if(u.value ===&quot;&quot;||u.value ===&quot;手机号/会员名/邮箱&quot;||p.value===&quot;&quot;){
+    $(&quot;mmdl&quot;).style.display=&quot;none&quot;
+    $(&quot;ban1&quot;).style.display=&quot;block&quot;
+    setTimeout(&quot;back()&quot;, 3000)
+}
+</code></pre><p>其中back函数是使样式恢复。<br>在这里我使用了标签的隐藏于显示来保证与官网的一致性。即：</p>
+<pre><code>style=&quot;display: none&quot;
+</code></pre><p>（注：display隐藏和visibility隐藏的区别。如果使用display隐藏，不会占据空    间，而visibility隐藏仍然会占据一定的空间）<br><img src="http://a1.qpic.cn/psb?/V10ENCWC0EABA1/34HildYa8M.jolk7m*dITYlVeau76tsMQYCTtXeTeX0!/b/dHcBAAAAAAAA&amp;bo=dQF6AQAAAAAFBys!&amp;rf=viewer_4" alt="成功"></p>
+<p><img src="http://a2.qpic.cn/psb?/V10ENCWC0EABA1/eag07eMolUQlBNmNMWAAEJ5G6GnPuuz*IJXxF*4Gnio!/b/dAkBAAAAAAAA&amp;bo=jwF5AQAAAAAFB9I!&amp;rf=viewer_4" alt="失败"></p>
+<h1 id="三、遇到的问题及其解决方法"><a href="#三、遇到的问题及其解决方法" class="headerlink" title="三、遇到的问题及其解决方法"></a>三、遇到的问题及其解决方法</h1><p>1.登陆框样式蜜汁错误</p>
+<pre><code>&lt;link href=&quot;bootstrap-3.3.5-dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot;&gt;
+&lt;link href=&quot;styles.css&quot; rel=&quot;stylesheet&quot;&gt;
+</code></pre><p>以上代码不能调动位置即可，CSS样式有先后的，后来的会覆盖之前的。</p>
+<p>2.Js代码在登录框中无法正常使用页面总刷新</p>
+<pre><code>&lt;button class=&quot;btn&quot; style=&quot;color:white;font-weight:bold;&quot; value=&quot;submit&quot; id=&quot;submit&quot; type=&quot;button&quot;&gt;登 &amp;nbsp;录&lt;/button&gt;
+</code></pre><p>其中的style改成 button而不是submit，否则网页会刷新，之后的js代码将无法使用。</p>
+<p>3.标签隐藏仍然占空间<br>之前在百度上寻找的visibility设置来隐藏发现其虽然隐藏了标签，但是仍然会占用空间，因此采用display来隐藏标签，这样就不会占用一点的空间啦~</p>
+<p>4.关于JS代码中仍然没有解决的问题<br>由于时间有限，水平有限。setTimeout函数研究的并不是很清楚，因此登陆后的0.2秒延时没有做出来，只做出了3秒后标签恢复原状。<br>还有JS语言不熟，对于含参的函数无法熟练使用，导致了最后的恢复标签样式的函数不能带有参数，只能写多个同样的函数。（在这里被自己蠢哭了/(ㄒoㄒ)/~~）</p>
+<pre><code>var back = function(){
+    $(&quot;mmdl&quot;).style.display=&quot;block&quot;
+    $(&quot;ban1&quot;).style.display=&quot;none&quot;
+}
+var back2 = function(){
+    $(&quot;mmdl&quot;).style.display=&quot;block&quot;
+    $(&quot;ban2&quot;).style.display=&quot;none&quot;
+}
+var back3 = function(){
+    $(&quot;mmdl&quot;).style.display=&quot;block&quot;
+    $(&quot;ban3&quot;).style.display=&quot;none&quot;
+}
+</code></pre><h1 id="四、小结"><a href="#四、小结" class="headerlink" title="四、小结"></a>四、小结</h1><p>这次时间有限，学习并且基本完成了任务，虽然花了很多时间（而且此时此刻还没时间洗澡/(ㄒoㄒ)/~~），但是觉得还是不亏。学到了很多前端知识，而且因为这次的学习，觉得好好的将网页的相关知识从头基础扎实的学一遍。以及向其他完美完成任务的大佬同学低头。<br>还有还有，就是webstorm这一套软件真好用啊，准备将java和C++的IDE全部换成这一套。</p>
+<p>以下是HTML源代码：</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;淘宝网 - 淘！我喜欢&lt;/title&gt;
+    &lt;link href=&quot;bootstrap-3.3.5-dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot;&gt;
+    &lt;link href=&quot;styles.css&quot; rel=&quot;stylesheet&quot;&gt;
+
+&lt;/head&gt;
+    &lt;body&gt;
+
+        &lt;div class=&quot;top&quot;&gt;
+            &lt;a href=&quot;https://survey.taobao.com/survey/Q095thIx2?spm=a2107.1.1000340.2.E4AgbA&quot; class=&quot;link&quot; style=&quot;font-size:12px&quot;&gt;
+                &quot;登录页面&quot;改进建议
+            &lt;/a&gt;
+            &lt;a href=&quot;https://www.taobao.com/?spm=a2107.1.1000340.1.ac8n06&quot; class=&quot;logo&quot;&gt;&lt;img  src=&quot;logo.png&quot;&gt;&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;mid&quot;&gt;
+            &lt;div class=&quot;midin&quot;&gt;
+                &lt;form class=&quot;login&quot; &gt;
+                    &lt;div class=&quot;alert alert-warning&quot; style=&quot;display: none&quot; id=&quot;ban1&quot;&gt;&lt;img src=&quot;ban.png&quot;&gt;&amp;nbsp;&amp;nbsp;&lt;span style=&quot;font-size:12px&quot; &gt;请输入账户名和密码&lt;/span&gt;&lt;/div&gt;
+                    &lt;div class=&quot;alert alert-warning&quot; style=&quot;display: none&quot; id=&quot;ban2&quot;&gt;&lt;img src=&quot;ban.png&quot;&gt;&amp;nbsp;&amp;nbsp;&lt;span style=&quot;font-size:12px&quot; &gt;用户尚未注册&lt;/span&gt;&lt;/div&gt;
+                    &lt;div class=&quot;alert alert-warning&quot; style=&quot;display: none&quot; id=&quot;ban3&quot;&gt;&lt;img src=&quot;ban.png&quot;&gt;&amp;nbsp;&amp;nbsp;&lt;span style=&quot;font-size:12px&quot; &gt;密码错误&lt;/span&gt;&lt;/div&gt;
+                    &lt;div class=&quot;alert alert-success&quot; style=&quot;display: none&quot; id=&quot;ok&quot;&gt;&lt;img src=&quot;right.png&quot;&gt;&amp;nbsp;&amp;nbsp;&lt;span style=&quot;font-size:12px&quot; &gt;登陆成功&lt;/span&gt;&lt;/div&gt;
+                    &lt;div class=&quot;title&quot; style=&quot;font-size:16px;font-weight:bold;&quot; id=&quot;mmdl&quot; &gt;密码登录&lt;/div&gt;
+                    &lt;div class=&quot;input-group&quot;&gt;
+                        &lt;span class=&quot;input-group-addon&quot;&gt;
+                            &lt;span class=&quot;glyphicon glyphicon-user&quot;&gt;&lt;/span&gt;
+                        &lt;/span&gt;
+                        &lt;input type=&quot;text&quot; id=&quot;u&quot; class=&quot;form-control&quot; value=&quot;手机号/会员名/邮箱&quot; onfocus=&quot;if(this.value==defaultValue) {this.value=&apos;&apos;;this.type=&apos;text&apos;}&quot; onblur=&quot;if(!value) {value=defaultValue; this.type=&apos;text&apos;;}&quot; style=&quot;color:#CCC;&quot;&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;input-group&quot;&gt;
+                         &lt;span class=&quot;input-group-addon&quot;&gt;
+                            &lt;span class=&quot;glyphicon glyphicon-lock&quot;&gt;&lt;/span&gt;
+                        &lt;/span&gt;
+                        &lt;input type=&quot;password&quot; id=&quot;p&quot; class=&quot;form-control&quot;&gt;
+                    &lt;/div&gt;
+                    &lt;button class=&quot;btn&quot; style=&quot;color:white;font-weight:bold;&quot; value=&quot;submit&quot; id=&quot;submit&quot; type=&quot;button&quot;&gt;登 &amp;nbsp;录&lt;/button&gt;
+                    &lt;a href=&quot;#&quot; id=&quot;forget&quot;&gt;忘记密码&lt;/a&gt;
+                    &lt;a href=&quot;#&quot; id=&quot;reg&quot;&gt;免费注册&lt;/a&gt;
+                &lt;/form&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;blank&quot;&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;bottom&quot;&gt;
+            &lt;hr&gt;
+            &lt;div class=&quot;b1&quot;&gt;
+                &lt;a href=&quot;http://www.alibabagroup.com/cn/global/home&quot; style=&quot;font-size:12px&quot;&gt;阿里巴巴集团&lt;/a&gt; |
+                &lt;a href=&quot;http://www.alibaba.com/?spm=a2107.1.1997523009.2.OQvvDS&quot; style=&quot;font-size:12px&quot;&gt;阿里巴巴国际站&lt;/a&gt; |
+                &lt;a href=&quot;http://www.1688.com/?spm=a2107.1.1997523009.3.OQvvDS&quot; style=&quot;font-size:12px&quot;&gt;阿里巴巴中国站&lt;/a&gt; |
+                &lt;a href=&quot;#&quot; style=&quot;font-size:12px&quot;&gt;全球速卖通&lt;/a&gt; |
+                &lt;a href=&quot;#&quot; style=&quot;font-size:12px&quot;&gt;淘宝网&lt;/a&gt; |
+                &lt;a href=&quot;#&quot; style=&quot;font-size:12px&quot;&gt;天猫&lt;/a&gt; |
+                &lt;a href=&quot;#&quot; style=&quot;font-size:12px&quot;&gt;聚划算&lt;/a&gt; |
+                &lt;a href=&quot;#&quot; style=&quot;font-size:12px&quot;&gt;一淘&lt;/a&gt; |
+                &lt;a href=&quot;#&quot; style=&quot;font-size:12px&quot;&gt;阿里妈妈&lt;/a&gt; |
+                &lt;a href=&quot;#&quot; style=&quot;font-size:12px&quot;&gt;淘宝旅行&lt;/a&gt; |
+                &lt;a href=&quot;#&quot; style=&quot;font-size:12px&quot;&gt;虾米&lt;/a&gt; |
+                &lt;a href=&quot;#&quot; style=&quot;font-size:12px&quot;&gt;阿里云计划&lt;/a&gt; |
+                &lt;a href=&quot;#&quot; style=&quot;font-size:12px&quot;&gt;云OS&lt;/a&gt; |
+                &lt;a href=&quot;#&quot; style=&quot;font-size:12px&quot;&gt;万网&lt;/a&gt; |
+                &lt;a href=&quot;#&quot; style=&quot;font-size:12px&quot;&gt;支付宝&lt;/a&gt; |
+                &lt;a href=&quot;#&quot; style=&quot;font-size:12px&quot;&gt;来往&lt;/a&gt; |
+            &lt;/div&gt;
+            &lt;hr&gt;
+            &lt;div class=&quot;b2&quot;&gt;
+                &lt;div class=&quot;b21&quot;&gt;
+                    &lt;a href=&quot;#&quot; style=&quot;font-size:12px&quot;&gt;关于淘宝&lt;/a&gt;
+                    &lt;a href=&quot;#&quot; style=&quot;font-size:12px&quot;&gt;合作伙伴&lt;/a&gt;
+                    &lt;a href=&quot;#&quot; style=&quot;font-size:12px&quot;&gt;营销中心&lt;/a&gt;
+                    &lt;a href=&quot;#&quot; style=&quot;font-size:12px&quot;&gt;廉正举报&lt;/a&gt;
+                    &lt;a href=&quot;#&quot; style=&quot;font-size:12px&quot;&gt;联系客服&lt;/a&gt;
+                    &lt;a href=&quot;#&quot; style=&quot;font-size:12px&quot;&gt;开放平台&lt;/a&gt;
+                    &lt;a href=&quot;#&quot; style=&quot;font-size:12px&quot;&gt;诚征英才&lt;/a&gt;
+                    &lt;a href=&quot;#&quot; style=&quot;font-size:12px&quot;&gt;联系我们&lt;/a&gt;
+                    &lt;a href=&quot;#&quot; style=&quot;font-size:12px&quot;&gt;网站地图&lt;/a&gt;
+                    &lt;a href=&quot;#&quot; style=&quot;font-size:12px&quot;&gt;法律声明&lt;/a&gt;
+                    &amp;nbsp;&amp;nbsp;&amp;nbsp;
+                   &lt;span style=&quot;font-size:12px&quot;&gt;© 2016 Taobao.com 版权所有&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;span style=&quot;font-size:12px&quot;&gt;网络文化经营许可证：&lt;/span&gt;
+                &lt;span id=&quot;zengzhi&quot; style=&quot;font-size:12px&quot;&gt;文网文[2010]040号|&lt;/span&gt;
+                &lt;span style=&quot;font-size:12px&quot;&gt;增值电信业务经营许可证：浙B2-20080224-1|&lt;/span&gt;
+                &lt;span style=&quot;font-size:12px&quot; &gt;信息网络传播视听节目许可证：1109364号&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;a href=&quot;http://www.pingpinganan.gov.cn/web/index.aspx?spm=a2107.1.1997523009.28.OQvvDS&amp;file=index.aspx&quot; target＝_blank&gt;&lt;img src=&quot;wj.gif&quot;&gt;&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+    var $ = function(id){
+        return document.getElementById(id);
+    };
+    var btn = $(&quot;submit&quot;);
+    btn.onclick = function(){
+        var u = $(&quot;u&quot;);
+        var p = $(&quot;p&quot;);
+        if(u.value ===&quot;&quot;||u.value ===&quot;手机号/会员名/邮箱&quot;||p.value===&quot;&quot;){
+            $(&quot;mmdl&quot;).style.display=&quot;none&quot;
+            $(&quot;ban1&quot;).style.display=&quot;block&quot;
+            setTimeout(&quot;back()&quot;, 3000)
+        }else{
+            if(u.value ===&quot;13012345678&quot;){
+                if(p.value ===&quot;123456&quot;){
+                    $(&quot;mmdl&quot;).style.display=&quot;none&quot;
+                    $(&quot;ok&quot;).style.display=&quot;block&quot;
+                    setTimeout(&quot;backok()&quot;, 3000)
+                }
+                else {
+                    $(&quot;mmdl&quot;).style.display=&quot;none&quot;
+                    $(&quot;ban3&quot;).style.display=&quot;block&quot;
+                    setTimeout(&quot;back3()&quot;, 3000)
+                }
+            }
+            else{
+                $(&quot;mmdl&quot;).style.display=&quot;none&quot;
+                $(&quot;ban2&quot;).style.display=&quot;block&quot;
+                setTimeout(&quot;back2()&quot;, 3000)
+            }
+        }
+
+    }
+    var back = function(){
+        $(&quot;mmdl&quot;).style.display=&quot;block&quot;
+        $(&quot;ban1&quot;).style.display=&quot;none&quot;
+    }
+    var back2 = function(){
+        $(&quot;mmdl&quot;).style.display=&quot;block&quot;
+        $(&quot;ban2&quot;).style.display=&quot;none&quot;
+    }
+    var back3 = function(){
+        $(&quot;mmdl&quot;).style.display=&quot;block&quot;
+        $(&quot;ban3&quot;).style.display=&quot;none&quot;
+    }
+    var backok = function(){
+        $(&quot;mmdl&quot;).style.display=&quot;block&quot;
+        $(&quot;ok&quot;).style.display=&quot;none&quot;
+    }
+&lt;/script&gt;
+</code></pre><p>以下是CSS源代码：</p>
+<pre><code>.body{
+    margin:0;
+    padding:0;
+}
+.top{
+    width: 1200px;
+    height: 80px;
+    margin:0 auto 0 auto;
+    padding:15px 0 15px 0;
+}
+.logo{
+    float: left;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
+}
+.link{
+    float: right;
+    color: #666;
+    height: 45px;
+    line-height: 44px;
+    font-family: &apos;Microsoft YaHei&apos;, tahoma, arial, &apos;Hiragino Sans GB&apos;, 宋体, sans-serif;
+}
+.link:hover{
+    color: #ff4400;
+    text-decoration: none;
+}
+.mid{
+    height: 600px;
+    background: url(&quot;login-bg.jpg&quot;) no-repeat center;
+
+}
+.blank{
+    height: 45px;
+}
+.bottom{
+    width: 1200px;
+    margin:0 auto 0 auto;
+}.b1{
+     height: 20px;
+ }
+ .b1 a{
+     color: #666;
+ }
+ .b2{
+     height:60px;
+ }
+ .b2 a{
+     color: #666;
+ }
+ .b21{
+     height: 30px;
+ }
+ .b2 span{
+     color: #808080;
+ }
+ #zengzhi{
+     color: #333;
+ }
+ .login{
+     width: 350px;
+     height: 350px;
+     background-color: #f1f6ff;
+     float:right;
+     margin-top: 100px;
+     border-radius: 5px;
+ }
+ .midin{
+     width: 1200px;
+     margin:0 auto 0 auto;
+ }
+.title{
+    margin: 35px 20px 35px 20px;
+    font-family: &apos;Microsoft YaHei&apos;, tahoma, arial, &apos;Hiragino Sans GB&apos;, 宋体, sans-serif;
+}
+.input-group{
+    margin: 0 20px 30px 20px;
+    height: 40px;
+}
+.input-group input{
+    height: 40px;
+}
+
+.btn{
+     width: 310px;
+     background-color: #ff4400;
+     margin: 0 20px 30px 20px;
+     height: 40px;
+     font-family: &apos;Microsoft YaHei&apos;, tahoma, arial, &apos;Hiragino Sans GB&apos;, 宋体, sans-serif;
+     font-size: 16px;
+ }
+ .btn:hover{
+     background-color: #f42b00;
+ }
+ #forget{
+     float:left;
+     margin-left: 20px;
+     color:#666;
+     font-size:12px;
+ }
+#reg{
+    float:right;
+    margin-right: 20px;
+    color:#666;
+    font-size:12px;
+}
+#forget:hover{
+    color: #ff4400;
+    text-decoration: none;
+}
+#reg:hover{
+    color: #ff4400;
+    text-decoration: none;
+}
+.b1 a:hover{
+    color: #ff4400;
+    text-decoration: none;
+}
+.b2 a:hover{
+    color: #ff4400;
+    text-decoration: none;
+}
+
+.alert-warning{
+    height: 32px;
+    margin: 35px 20px 25px 15px;
+    padding: 4px 15px 20px 15px;
+}
+.alert-success{
+    height: 32px;
+    margin: 35px 20px 25px 15px;
+    padding: 4px 15px 20px 15px;
+}
+</code></pre>
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/HTML/" rel="tag">#HTML</a>
+          
+            <a href="/tags/CSS/" rel="tag">#CSS</a>
+          
+            <a href="/tags/JavaScript/" rel="tag">#JavaScript</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/10/04/搭建静态博客/" rel="next" title="搭建静态博客">
+                <i class="fa fa-chevron-left"></i> 搭建静态博客
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/10/29/用Unity3d做一个人物运动/" rel="prev" title="用Unity3d做一个人物运动">
+                用Unity3d做一个人物运动 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <div class="ds-share flat" data-thread-key="2016/10/15/制作伪淘宝登录界面/"
+     data-title="制作伪淘宝登录界面"
+     data-content=""
+     data-url="http://yoursite.com/2016/10/15/制作伪淘宝登录界面/">
+  <div class="ds-share-inline">
+    <ul  class="ds-share-icons-16">
+
+      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+      <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+
+    </ul>
+    <div class="ds-share-icons-more">
+    </div>
+  </div>
+</div>
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/10/15/制作伪淘宝登录界面/"
+           data-title="制作伪淘宝登录界面" data-url="http://yoursite.com/2016/10/15/制作伪淘宝登录界面/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.jpg"
+               alt="Mirza Zhao" />
+          <p class="site-author-name" itemprop="name">Mirza Zhao</p>
+          <p class="site-description motion-element" itemprop="description">I'm but a student.There is much to learn!</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">10</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/u/2620945487?is_hot=1" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  Weibo
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一、前期准备"><span class="nav-number">1.</span> <span class="nav-text">一、前期准备</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二、学习制作伪淘宝登陆页面"><span class="nav-number">2.</span> <span class="nav-text">二、学习制作伪淘宝登陆页面</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、创建项目"><span class="nav-number">2.1.</span> <span class="nav-text">一、创建项目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、开始写HTML、CSS"><span class="nav-number">2.2.</span> <span class="nav-text">二、开始写HTML、CSS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、JS的插入"><span class="nav-number">2.3.</span> <span class="nav-text">三、JS的插入</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#三、遇到的问题及其解决方法"><span class="nav-number">3.</span> <span class="nav-text">三、遇到的问题及其解决方法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#四、小结"><span class="nav-number">4.</span> <span class="nav-text">四、小结</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Mirza Zhao</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<span id="busuanzi_container_site_pv" style='display:none'>
+    丨本站总访问量<span id="busuanzi_value_page_pv"><i class="fa fa-spinner"></i></span>次
+</span>
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"124665532"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+      
+      <script src="/vendors/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+      <script src="/js/src/hook-duoshuo.js"></script>
+    
+  
+
+
+
+
+
+  
+  
+  
+
+  
+
+  
+<script type="text/javascript" async src="//push.zhanzhang.baidu.com/push.js">
+</script>
+
+
